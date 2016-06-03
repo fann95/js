@@ -4,7 +4,7 @@ var qs = require("querystring");
 var Tstamp='repeat';
 var Orders='';
 var MasterBalance='';
-var creator="Dray Stanislav https://www.mql5.com/ru/users/fan9"
+var creator="https://www.mql5.com/ru/users/fan9"
 
 
 function onRequest(request, response) {
@@ -36,7 +36,6 @@ function onRequest(request, response) {
 			response.end();
 		} 
 	}else{
-        //response.writeHead(404, {"Content-Type": "text/html"});
         response.write("Technology by "+creator);
         response.end();
     }
