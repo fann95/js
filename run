@@ -1,0 +1,2 @@
+#! /bin/bash
+forever start -p /root/log -l port.log --spinSleepTime 10000 /root/port.js
