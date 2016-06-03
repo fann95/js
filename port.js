@@ -28,9 +28,6 @@ function onRequest(request, response) {
 			}
 		}
 	}else if(params.side==='slave'){                    //клиент
-	    if(params.Tstamp==='repeat'){
-		  Tstamp='repeat';  
-	    }
       	if(params.Tstamp!==Tstamp && Orders!=''){
 			response.write(Orders+'*'+MasterBalance+'*'+Tstamp);
 			response.end();
