@@ -9,7 +9,7 @@ var creator="Dray Stanislav https://www.mql5.com/ru/users/fan9"
 
 function onRequest(request, response) {
 	var pathname = url.parse(request.url).pathname;
-    var params = qs.parse(pathname);
+	var params = qs.parse(pathname);
 	
 	if (params.side==='master') {                       //мастер
 		if(params.cmd==='update'){
@@ -28,7 +28,7 @@ function onRequest(request, response) {
 			}
 		}
 	}else if(params.side==='slave'){                    //клиент
-      	if(params.Tstamp!==Tstamp && Orders!=''){
+		if(params.Tstamp!==Tstamp && Orders!=''){
 			response.write(Orders+'*'+MasterBalance+'*'+Tstamp);
 			response.end();
 		}else{
@@ -36,10 +36,11 @@ function onRequest(request, response) {
 			response.end();
 		} 
 	}else{
-        //response.writeHead(404, {"Content-Type": "text/html"});
-        response.write("Technology by "+creator);
-        response.end();
-    }
+		//response.writeHead(404, {"Content-Type": "text/html"});
+		response.write("Technology by "+creator);
+		response.end();
+		
+	}
 
 }
 
