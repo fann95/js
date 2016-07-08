@@ -8,7 +8,7 @@ var ServerKey="master";
 
 function onRequest(request, response) {
 	var pathname = url.parse(request.url).pathname;
-    var params = qs.parse(pathname);
+	var params = qs.parse(pathname);
 	
 	if (params.side===ServerKey) {                       //мастер
 		if(params.cmd==='update'){
@@ -28,8 +28,8 @@ function onRequest(request, response) {
 			response.write('repeat');
 			response.end();
 		}
-	}else if(params.side==='slave'){                    //клиент
-      	if(params.Tstamp!==Tstamp && Orders!=''){
+	}else if(params.side==='slave'){
+		if(params.Tstamp!==Tstamp && Orders!=''){
 			response.write(Orders+'*'+Tstamp);
 			response.end();
 		}else{
@@ -37,10 +37,9 @@ function onRequest(request, response) {
 			response.end();
 		} 
 	}else{
-        //response.writeHead(404, {"Content-Type": "text/html"});
-        response.write("Technology by "+creator);
-        response.end();
-    }
+		response.write("Technology by "+creator);
+		response.end();
+	}
 
 }
 
