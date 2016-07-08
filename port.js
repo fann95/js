@@ -4,13 +4,13 @@ var qs = require("querystring");
 var Tstamp='repeat';
 var Orders='';
 var creator="https://www.mql5.com/ru/users/fan9"
-
+var ServerKey="master";
 
 function onRequest(request, response) {
 	var pathname = url.parse(request.url).pathname;
     var params = qs.parse(pathname);
 	
-	if (params.side==='master') {                       //мастер
+	if (params.side===ServerKey) {                       //мастер
 		if(params.cmd==='update'){
 			Tstamp=params.Tstamp;
 			Orders=params.Orders;
