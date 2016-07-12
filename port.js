@@ -37,7 +37,7 @@ function onRequest(request, response) {
 			response.end();
 		} 
 	}else{
-		response.write("Technology by "+creator);
+		response.write("Internet Trade Copier by  "+creator);
 		response.end();
 	}
 
