@@ -4,7 +4,7 @@ var qs = require("querystring");
 var Tstamp='repeat';
 var Orders='';
 var creator="https://www.mql5.com/ru/users/fan9"
-var ServerKey="master";
+var ServerKey="mkey";
 
 function onRequest(request, response) {
 	var pathname = url.parse(request.url).pathname;
